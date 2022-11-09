@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box;}
+        
+        body { 
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background: lightgray;
+        }
+        
+        .header {
+          overflow: hidden;
+          background-color: rgb(185, 226, 241);
+          padding: 10px 10px;
+        }
+        
+        .header a {
+          float: left;
+          color: black;
+          text-align: center;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px; 
+          line-height: 25px;
+          border-radius: 4px;
+        }
+        .logo img{
+          float: left;
+          width: 150px;
+          height: 60px;
+          padding-top: 0px;
+          text-align: center;
+        }
+        
+        .header a.logo {
+          height: 25px;
+          width: 25px;
+        }
+        
+        .header a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .header a.active {
+          background-color: rgb(17, 156, 211);
+          color: white;
+        }
+        
+        .header-right {
+          float: right;
+          padding-top: 0px;
+        }
+        
+        @media screen and (max-width: 500px) {
+          .header a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
+          
+          .header-right {
+            float: none;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: center;
+          }
+        }
+        .logo img{
+          float: none;
+          flex-direction: column;
+          padding-top: 0px;
+          text-align: center;
+      }
+      
+</style>
+    <style type="text/css">
+       
+        .form-style-5 {
+            max-width: 400px;
+            padding: 10px 20px;
+            background: white;
+            color: black;
+            margin: 10px auto;
+            padding: 20px;
+            background: rgb(230, 240, 243);
+            border-radius: 8px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        .form-style-5 fieldset {
+            border: 0.5px solid;
+        }
+
+        .form-style-5 legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .form-style-5 label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-style-5 input[type="text"],
+        .form-style-5 textarea,
+        .form-style-5 select {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background: white;
+            color: #ffc185;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            margin: 0;
+            outline: 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            background-color: whitesmoke;
+            color: black;
+            -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            margin-bottom: 30px;
+        }
+
+        .form-style-5 input[type="text"]:focus,
+        .form-style-5 textarea:focus,
+        .form-style-5 select:focus {
+          background:lightgray;
+        }
+
+        .form-style-5 select {
+            -webkit-appearance: menulist-button;
+            height: 35px;
+        }
+
+        .form-style-5 .number {
+            background:lightgoldenrodyellow;
+            color: lightgoldenrodyellow;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-radius: 15px 15px 15px 0px;
+        }
+
+        .form-style-5 input[type="submit"] {
+            position: relative;
+            display: block;
+            padding: 19px 39px 18px 39px;
+            color:black;
+            margin: 0 auto;
+            background:rgb(17, 156, 211);
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            width: 100%;
+            border: 1px solid rgb(173, 166, 166);
+            border-width: 1px 1px 3px;
+            margin-bottom: 10px;
+        }
+
+        .form-style-5 input[type="submit"]:hover {
+          background: rgb(67, 67, 218);
+        }
+        .footer {
+          position: static;
+          left: 0;
+          bottom: 0;
+          height: 70px;
+          width: 100%;
+          background-color: rgb(185, 226, 241);
+          color: black;
+          text-align: center;
+        }
+        .footer p{
+          padding:  20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+      <div class="logo">
+        <img src="logo.png">
+      
+        <div class="header-right">
+          <a  href="index.html">Home</a>
+          <a class="active" href="#lead">Web to Lead</a>
+          <a  href="Webtocase.html">Web to Case</a>
+        </div>
+      </div>
+      </div>
+    <div id="Lead" class="tabcontent">
+
+        <div class="form-style-5">
+
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+
+                <fieldset>
+
+                    <input type=hidden name="oid" value="00D5g0000096Rp0">
+                    <input type=hidden name="retURL" value="http://">
+
+
+                    <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
+                    type="text" /><br>
+        
+                <label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20"
+                    type="text" /><br>
+        
+                <label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+        
+                <label for="mobile">Mobile</label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
+        
+                <label for="company">Company</label><input id="company" maxlength="40" name="company" size="20"
+                    type="text" /><br>
+        
+                <label for="industry">Industry</label><select id="industry" name="industry">
+                    <option value="">--None--</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Apparel">Apparel</option>
+                    <option value="Banking">Banking</option>
+                    <option value="Biotechnology">Biotechnology</option>
+                    <option value="Chemicals">Chemicals</option>
+                    <option value="Communications">Communications</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Education">Education</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Environmental">Environmental</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Food &amp; Beverage">Food &amp; Beverage</option>
+                    <option value="Government">Government</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Hospitality">Hospitality</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Machinery">Machinery</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Media">Media</option>
+                    <option value="Not For Profit">Not For Profit</option>
+                    <option value="Recreation">Recreation</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Shipping">Shipping</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Telecommunications">Telecommunications</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Other">Other</option>
+                </select><br>
+        
+                <label for="city">City</label><input id="city" maxlength="40" name="city" size="20" type="text" /><br>
+        
+                <label for="state">State/Province</label><input id="state" maxlength="20" name="state" size="20"
+                    type="text" /><br>
+        
+                <input type="submit" name="submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+      <p>©2022 <b>Azmat Siddiqui</b>, LLC. All Rights Reserved</p>
+    </div>
+    
+</body>
+</html>
